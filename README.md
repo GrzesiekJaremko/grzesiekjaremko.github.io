@@ -1,2 +1,2 @@
-# grzesiekjaremko.github.io
+# GregJaremkoPortfolio
 coursera test repository
