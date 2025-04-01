@@ -1,365 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greg Jaremko | Web Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaqueries.css">
 </head>
+
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">Greg Jaremko</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Greg Jaremko</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#Experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#Contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
-        </div>
-    </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="assets/profile-pic.png" alt="Greg Jaremko profile picture">
-        </div>
-        <div class="section__text">
-            <p calss="section__text_p1">Hello, I'm</p>
-            <h1 calss="title">Greg Jaremko</h1>
-            <p class="section__p2">Web developer</p>
-            <div class="btn-container">
-                <button 
-                class="btn btn-color-2" 
-                onclick="window.open('./assets/resume-example.pdf')">
-                    Download CV
-                </button>
-                <button 
-                class="btn btn-color-1" 
-                onclick="location.href='/#contact'">
-                    Contact info
-                </button>
-                </div>
-                <div id="socials-container">
-                    <img src="./assets/linkedin.png" 
-                    alt="My linkedIn profile"
-                    class="icon" 
-                    onclick="location.href='https://www.linkedin.com/in/greg-jaremko-594739291/'">
-                    <img src="./assets/github.png" 
-                    alt="My Github profile"
-                    class="icon" 
-                    onclick="location.href='https://github.com/'">
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="about">
-        <p class="section__text__p1">Get to know more</p>
-        <h1 class="title">About me</h1>
-        <div class="section-container">
-            <div class="section__pic-container">
-                    <img 
-                    src="assets/about-pic.jpg" 
-                    alt="Profile picture"
-                    class="about-pic"
-                />
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img 
-                        src="assets/experience.png" 
-                        alt="Experience icon"
-                        class="icon"
-                        />
-                        <h3>Experience</h3>
-                        <p>1+ years<br />Fullstack Development</p>
-                    </div>    
-                    <div class="details-container">
-                        <img 
-                        src="assets/education.png" 
-                        alt="Education icon"
-                        class="icon"
-                        />
-                        <h3>Education</h3>
-                        <p>Foundation Degree<br/>Software Development</p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p>
-                        I’m a passionate and driven 24-year-old software developer with a particular focus on web development. Beyond my current role, I dedicate time to personal projects, continually honing my skills and exploring innovative solutions. My proactive approach has led me to work with real businesses, creating custom websites from scratch that exceed expectations and deliver real value.<br/>
-
-                        I thrive in collaborative environments, utilising my strong communication and teamwork abilities to contribute effectively to projects. I always aim to go above and beyond to deliver exceptional results. With a deep passion for technology and a clear focus on building a successful career in software development, I’m eager to bring my skills and dedication to your team.
-                        
-                        
-                    </p>
-                </div>
-            </div>
-        </div>
-        <img 
-        src="assets/arrow.png" 
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-        />
-    </div>
-</section>
-<section id="experience">
-  <p class="section__text__p1">Explore My</p>
-  <h1 class="title">Experience</h1>
-  <div class="experience-details-container">
-    <div class="about-containers">
-      <div class="details-container">
-        <h2 class="experience-sub-title">Frontend Development</h2>
-        <div class="article-container">
-          <article>
-            <img
-              src="assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>HTML</h3>
-              <p>Experienced</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>CSS</h3>
-              <p>Experienced</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>SASS</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>JavaScript</h3>
-              <p>Basic</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>TypeScript</h3>
-              <p>Basic</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>Material UI</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-        </div>
-      </div>
-      <div class="details-container">
-        <h2 class="experience-sub-title">Frontend Development</h2>
-        <div class="article-container">
-          <article>
-            <img
-              src="assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>PostgreSQL</h3>
-              <p>Basic</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>Node JS</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>Express JS</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-          <article>
-            <img
-              src="assets/checkmark.png"
-              alt="Experience icon"
-              class="icon"
-            />
-            <div>
-              <h3>Git</h3>
-              <p>Intermediate</p>
-            </div>
-          </article>
-        </div>
-      </div>
+  <div id="loader">
+    <div class="loader-content">
+      <div class="spinner"></div>
+      <p>Loading Portfolio...</p>
     </div>
   </div>
-  <img
-    src="assets/arrow.png"
-    alt="Arrow icon"
-    class="icon arrow"
-    onclick="location.href='./#projects'"
-  />
-</section>
-<section id="projects">
-  <p class="section__text__p1">Browse My Recent</p>
-  <h1 class="title">Projects</h1>
-  <div class="experience-details-container">
-    <div class="about-containers">
-      <div class="details-container color-container">
-        <div class="article-container">
-          <img
-            src="assets/project-1.png"
-            alt="Project 1"
-            class="project-img"
-          />
-        </div>
-        <h2 class="experience-sub-title project-title">Netley Kennels Website</h2>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='https://netleykennelsandcattery.com/'"
-          >
-            Visit Website
-          </button>
-        </div>
-      </div>
-      <div class="details-container color-container">
-        <div class="article-container">
-          <img
-            src="assets/project-2.png"
-            alt="Project 2"
-            class="project-img"
-          />
-        </div>
-        <h2 class="experience-sub-title project-title">Project Two</h2>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/'"
-          >
-            Github
-          </button>
-          <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/'"
-          >
-            Live Demo
-          </button>
-        </div>
-      </div>
-        <h2 class="experience-sub-title project-title">Project Three</h2>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/'"
-          >
-            Github
-          </button>
-          <button
-            class="btn btn-color-2 project-btn"
-            onclick="location.href='https://github.com/'"
-          >
-            Live Demo
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <img
-    src="assets/arrow.png"
-    alt="Arrow icon"
-    class="icon arrow"
-    onclick="location.href='./#contact'"
-  />
-</section>
-<section id="contact">
-  <p class="section__text__p1">Get in Touch</p>
-  <h1 class="title">Contact Me</h1>
-  <div class="contact-info-upper-container">
-    <div class="contact-info-container">
-      <img
-        src="assets/email.png"
-        alt="Email icon"
-        class="icon contact-icon email-icon"
-      />
-      <p><a href="mailto:examplemail@gmail.com">Jaremkog@icloud.com</a></p>
-    </div>
-    <div class="contact-info-container">
-      <img
-        src="assets/linkedin.png"
-        alt="LinkedIn icon"
-        class="icon contact-icon"
-      />
-      <p><a href="https://www.linkedin.com/in/greg-jaremko-594739291/">LinkedIn</a></p>
-    </div>
-  </div>
-</section>
-<footer>
   <nav>
     <div class="nav-links-container">
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <li><a href="#experience">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#projects">Contact</a></li>
       </ul>
     </div>
   </nav>
-  <p>Copyright &#169; 2024 Greg Jaremko. All Rights Reserved.</p>
-</footer>
-<script src="script.js"></script>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="assets/profile-pic.png" alt="Greg Jaremko profile picture" class="profile-pic">
+    </div>
+    <div class="section__text">
+      <p class="section__text__subtitle">Hello, I'm</p>
+      <h1 class="title">Greg Jaremko</h1>
+      <p class="section__text__p2">Welcome to my Portfolio</p>
+      <div class="btn-container">
+        <button class="btn btn-color-1" onclick="window.open('./assets/resume-example.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-2" onclick="location.href='#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <a href="https://www.linkedin.com/in/greg-jaremko-594739291/" target="_blank" class="social-link">
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon">
+        </a>
+        <a href="https://github.com/GrzesiekJaremko" target="_blank" class="social-link">
+          <img src="./assets/github.png" alt="My Github profile" class="icon">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-subtitle">Get to know</p>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-image">
+          <img src="assets/about-pic.jpg" alt="Greg Jaremko" class="about-pic">
+        </div>
+        <div class="about-details">
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="assets/experience.png" alt="Experience icon" class="icon">
+              <h3>Experience</h3>
+              <p>1+ years<br />Freelance and personal projects</p>
+            </div>
+            <div class="details-container">
+              <img src="assets/education.png" alt="Education icon" class="icon">
+              <h3>Education</h3>
+              <p>Foundation Degree<br />Software Development</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I'm a passionate and driven 24-year-old software developer with a particular focus on web development.
+              Beyond my current role, I dedicate time to personal projects, continually honing my skills and exploring
+              innovative solutions. My proactive approach has led me to work with real businesses, creating custom
+              websites from scratch that exceed expectations and deliver real value.
+            </p>
+            <p>
+              I thrive in collaborative environments, utilising my strong communication and teamwork abilities to
+              contribute effectively to projects. I always aim to go above and beyond to deliver exceptional results.
+              With a deep passion for technology and a clear focus on building a successful career in software
+              development, I'm eager to bring my skills and dedication to your team.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#experience'">
+  </section>
+
+  <section id="experience">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-subtitle">What I Offer</p>
+        <h2 class="section-title">Skills & Expertise</h2>
+      </div>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <div class="article-container">
+              <article>
+                <img src="assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>PHPMyAdmin</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>SQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>PHP</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="assets/checkmark.png" alt="Experience icon" class="icon">
+                <div>
+                  <h3>Git</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#projects'">
+  </section>
+
+  <section id="projects">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-subtitle">My Work</p>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+      <div class="experience-details-container">
+        <div class="about-containers project-containers">
+          <a href="workout-tracker.html" class="project-link">
+            <div class="details-container color-container project-card">
+              <div class="article-container">
+                <img src="assets/advert.jpg" alt="Project 2" class="project-img">
+              </div>
+              <h2 class="project-title">Social Workout Tracker (Mobile Web App)</h2>
+            </div>
+          </a>
+          <a href="kennels-website.html" class="project-link">
+            <div class="details-container color-container project-card">
+              <div class="article-container">
+                <img src="assets/project-1.png" alt="Project 1" class="project-img">
+              </div>
+              <h2 class="project-title">Netley Kennels Website</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <img src="assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='#contact'">
+  </section>
+
+  <section id="contact">
+    <div class="section-container">
+      <div class="section-header">
+        <p class="section-subtitle">Get in Touch</p>
+        <h2 class="section-title">Contact Me</h2>
+      </div>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="assets/email.png" alt="Email icon" class="icon contact-icon email-icon">
+          <p><a href="mailto:Jaremkog@icloud.com">Jaremkog@icloud.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon">
+          <p><a href="https://www.linkedin.com/in/greg-jaremko-594739291/" target="_blank">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="assets/phone.png" alt="Phone icon" class="icon contact-icon">
+          <p><a href="#" onclick="copyPhoneNumber(event)" class="phone-link">+447562700294</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+
+    <p>Copyright &#169; 2024 Greg Jaremko. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
