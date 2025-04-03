@@ -305,7 +305,6 @@ section {
 }
 
 /* ABOUT SECTION */
-/* ABOUT SECTION */
 #about {
   position: relative;
   background: var(--white);
@@ -359,7 +358,6 @@ section {
   box-shadow: var(--shadow);
 }
 
-/* Media Queries for About Section */
 @media screen and (max-width: 768px) {
   nav {
     justify-content: space-around;
@@ -654,7 +652,7 @@ footer p {
   color: var(--primary-light);
 }
 
-/* Media Queries */
+
 @media screen and (max-width: 1200px) {
   #profile {
       flex-direction: column;
@@ -1199,7 +1197,6 @@ footer p {
 }
 
 @media (max-width: 768px) {
-  /* ... existing mobile styles ... */
 
   .demo-container {
     flex-direction: column;
@@ -1362,7 +1359,6 @@ footer p {
   transform: scale(1.2);
 }
 
-/* Hide scrollbar but keep functionality */
 .carousel-inner-kennels::-webkit-scrollbar {
   display: none;
 }
@@ -1417,7 +1413,6 @@ footer p {
   }
 }
 
-/* Add this at the end of your CSS file - mobile fixes only */
 @media (max-width: 768px) {
   .carousel-kennels {
     width: 100vw;
@@ -1465,7 +1460,6 @@ footer p {
     scroll-snap-align: center;
   }
   
-  /* Hide scrollbar while keeping functionality */
   .carousel-inner-kennels::-webkit-scrollbar {
     display: none;
   }
