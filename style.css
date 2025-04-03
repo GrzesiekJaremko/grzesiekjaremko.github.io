@@ -76,7 +76,7 @@ nav, .nav-links {
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  height: 13vh;
   background: var(--white);
   box-shadow: var(--shadow);
   position: fixed;
@@ -186,8 +186,7 @@ section {
 
 /* PROFILE SECTION */
 #profile {
-  margin-top: 40px;
-  padding-top: 50px;
+  padding:15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,7 +194,6 @@ section {
   height: auto;
   min-height: 100vh;
   background: linear-gradient(135deg, var(--light) 0%, var(--white) 100%);
-  padding: 5rem 2rem;
 }
 
 .section__pic-container {
@@ -363,6 +361,18 @@ section {
 
 /* Media Queries for About Section */
 @media screen and (max-width: 768px) {
+  nav {
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 0 5%;
+  }
   .about-content {
       flex-direction: column;
       align-items: center;
@@ -651,6 +661,7 @@ footer p {
       gap: 2rem;
       height: auto;
       padding: 4rem 2rem;
+      margin-top: 0px;
   }
 
   .section__pic-container {
@@ -672,9 +683,6 @@ footer p {
 }
 
 @media screen and (max-width: 768px) {
-  #profile {
-    margin-top: 60px;
-  }
 
   .section__pic-container {
       width: 250px;
@@ -1377,7 +1385,8 @@ footer p {
   }
 
   .carousel-content-kennels img {
-    max-height: 60vh;
+    max-height: auto;
+    width: 10px;
   }
 
   .carousel-control-kennels {
@@ -1407,3 +1416,58 @@ footer p {
     margin-bottom: 1.5rem;
   }
 }
+
+/* Add this at the end of your CSS file - mobile fixes only */
+@media (max-width: 768px) {
+  .carousel-kennels {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 0.5rem 0;
+  }
+
+  .carousel-container-kennels {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .carousel-inner-kennels {
+    padding-left: 20px; /* Creates space for first item to center */
+    padding-right: 20px; /* Creates space for last item to center */
+    scroll-padding: 20px; /* Ensures snap happens within visible area */
+  }
+
+  .carousel-item-kennels {
+    padding: 0 10px;
+    min-width: calc(100% - 20px); /* Accounts for padding */
+  }
+
+  .carousel-content-kennels {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .carousel-content-kennels img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 20vh;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Improved scroll snapping */
+  .carousel-inner-kennels {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .carousel-item-kennels {
+    scroll-snap-align: center;
+  }
+  
+  /* Hide scrollbar while keeping functionality */
+  .carousel-inner-kennels::-webkit-scrollbar {
+    display: none;
+  }
+}
+
