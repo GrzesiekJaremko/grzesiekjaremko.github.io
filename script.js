@@ -78,17 +78,16 @@ if (darkModeToggle) {
     });
 }
 
-// Carousel functionality
+// Carousel functionality for both regular and kennels carousel
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all carousels on the page
-    const carousels = document.querySelectorAll('.carousel');
-    
-    carousels.forEach(carousel => {
-        const inner = carousel.querySelector('.carousel-inner');
-        const items = carousel.querySelectorAll('.carousel-item');
-        const prevBtn = carousel.querySelector('.carousel-control.prev');
-        const nextBtn = carousel.querySelector('.carousel-control.next');
-        const indicators = carousel.querySelectorAll('.indicator');
+    // Initialize regular carousel
+    const regularCarousel = document.querySelector('.carousel:not(.carousel-kennels)');
+    if (regularCarousel) {
+        const inner = regularCarousel.querySelector('.carousel-inner');
+        const items = regularCarousel.querySelectorAll('.carousel-item');
+        const prevBtn = regularCarousel.querySelector('.carousel-control.prev');
+        const nextBtn = regularCarousel.querySelector('.carousel-control.next');
+        const indicators = regularCarousel.querySelectorAll('.indicator');
         
         let currentIndex = 0;
         const itemCount = items.length;
@@ -102,23 +101,16 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Next button functionality
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex + 1) % itemCount;
-                updateCarousel();
-            });
-        }
+        if (nextBtn) nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % itemCount;
+            updateCarousel();
+        });
 
-        // Previous button functionality
-        if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex - 1 + itemCount) % itemCount;
-                updateCarousel();
-            });
-        }
+        if (prevBtn) prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + itemCount) % itemCount;
+            updateCarousel();
+        });
 
-        // Indicator functionality
         indicators.forEach((indicator, index) => {
             indicator.addEventListener('click', () => {
                 currentIndex = index;
@@ -126,95 +118,70 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // Initialize the carousel
+        updateCarousel();
+    }
+
+    // Initialize kennels carousel
+    const kennelsCarousel = document.querySelector('.carousel-kennels');
+    if (kennelsCarousel) {
+        const inner = kennelsCarousel.querySelector('.carousel-inner-kennels');
+        const items = kennelsCarousel.querySelectorAll('.carousel-item-kennels');
+        const prevBtn = kennelsCarousel.querySelector('.carousel-control-kennels.prev');
+        const nextBtn = kennelsCarousel.querySelector('.carousel-control-kennels.next');
+        const indicators = kennelsCarousel.querySelectorAll('.indicator');
+        
+        let currentIndex = 0;
+        const itemCount = items.length;
+
+        function updateCarousel() {
+            const itemWidth = items[0].offsetWidth;
+            const scrollPosition = currentIndex * itemWidth;
+            
+            inner.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+            
+            // Update indicators for kennels carousel
+            indicators.forEach((ind, i) => {
+                ind.classList.toggle('active', i === currentIndex);
+            });
+        }
+
+        if (nextBtn) nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % itemCount;
+            updateCarousel();
+        });
+
+        if (prevBtn) prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + itemCount) % itemCount;
+            updateCarousel();
+        });
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+        });
+
         updateCarousel();
         
-        // Auto-advance (optional)
-        // setInterval(() => {
-        //     currentIndex = (currentIndex + 1) % itemCount;
-        //     updateCarousel();
-        // }, 5000);
-    });
+        window.addEventListener('resize', updateCarousel);
+    }
 
-    // Check if hamburger nav exists
+    // Hamburger nav check
     const hamburgerNav = document.getElementById('hamburger-nav');
     if (!hamburgerNav) {
         console.log("Hamburger nav not found on this page");
     }
     
-    // Check media query match
-    const mediaQuery = window.matchMedia('(max-width: 768px)');
-    if (mediaQuery.matches) {
+    // Mobile view check
+    if (window.matchMedia('(max-width: 768px)').matches) {
         console.log("Mobile view detected");
+        const demoLink = document.querySelector('.demo-link');
+        if (demoLink) demoLink.textContent = 'Visit Live Site on Mobile';
     } else {
         console.log("Desktop view detected");
     }
 });
-
-const demoLink = document.querySelector('.demo-link');
-if (demoLink && window.matchMedia('(max-width: 768px)').matches) {
-  demoLink.textContent = 'Visit Live Site on Mobile';
-}
-
-// Update the carousel initialization in script.js
-document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.querySelector('.carousel-kennels');
-    if (carousel) {
-      const inner = carousel.querySelector('.carousel-inner-kennels');
-      const items = carousel.querySelectorAll('.carousel-item-kennels');
-      const prevBtn = carousel.querySelector('.carousel-control-kennels.prev');
-      const nextBtn = carousel.querySelector('.carousel-control-kennels.next');
-      const indicators = carousel.querySelectorAll('.indicator-kennels');
-      
-      let currentIndex = 0;
-      const itemCount = items.length;
-  
-      function updateCarousel() {
-        const itemWidth = items[0].offsetWidth;
-        const scrollPosition = currentIndex * itemWidth;
-        
-        // Smooth scroll to center the item
-        inner.scrollTo({
-          left: scrollPosition,
-          behavior: 'smooth'
-        });
-        
-        // Update indicators
-        indicators.forEach((ind, i) => {
-          ind.classList.toggle('active', i === currentIndex);
-        });
-      }
-  
-      // Handle next button
-      if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-          currentIndex = (currentIndex + 1) % itemCount;
-          updateCarousel();
-        });
-      }
-  
-      // Handle previous button
-      if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-          currentIndex = (currentIndex - 1 + itemCount) % itemCount;
-          updateCarousel();
-        });
-      }
-  
-      // Handle indicators
-      indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-          currentIndex = index;
-          updateCarousel();
-        });
-      });
-  
-      // Initialize
-      updateCarousel();
-      
-      // Handle window resize
-      window.addEventListener('resize', () => {
-        updateCarousel();
-      });
-    }
-  });
