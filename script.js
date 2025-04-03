@@ -95,7 +95,6 @@ document.addEventListener('DOMContentLoaded', function() {
         function updateCarousel() {
             inner.style.transform = `translateX(-${currentIndex * 100}%)`;
             
-            // Update indicators
             indicators.forEach((ind, i) => {
                 ind.classList.toggle('active', i === currentIndex);
             });
@@ -142,7 +141,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 behavior: 'smooth'
             });
             
-            // Update indicators for kennels carousel
             indicators.forEach((ind, i) => {
                 ind.classList.toggle('active', i === currentIndex);
             });
